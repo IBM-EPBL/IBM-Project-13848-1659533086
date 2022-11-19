@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--link rel="stylesheet" href="home.css"-->
+    <style>
+      body {
+        background-image: url('https://images.pexels.com/photos/1492364/pexels-photo-1492364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+    <title>
+        Gesture Recognition System
+    </title>
+</head>
+
+
+<body>
+<!--navigation bar-->
+<nav class="navbar navbar-expand-md navbar-dark">
+  <div class="container-xxl">
+    <a href="{{ url_for('home')}}" class="navbar-brand">
+      <span class="fw-normal  text-white">
+        Gesture Recognition System
+      </span>
+    </a>
+    <!--menu(toggle) button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--navbar links-->
+    <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="{{ url_for('home')}}" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ url_for('intro')}}" class="nav-link active">Introduction</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ url_for('image1')}}" class="nav-link active">Launch</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container-fluid m-3">
+    <div class="row justify-content-center align-items-center">
+      <div class="text-center text-md-center">
+        <h1>
+          <div class="display-2 text-white">Hand Gesture Recognition</div>
+          <div class="display-4 text-white-50">About the System</div>
+          <br>
+          <div class="text-center d-none d-md-block m-1">
+            <img class="rounded mx-auto d-block" src="https://media4.giphy.com/avatars/weinventyou/isH2PcsLG2hE.gif" alt="gesture img">
+          </div>
+          <br>
+          <small class="lead text-white">
+            Hand Gesture recognition system provides us an user friendly way of interaction with the computer which is more familiar to the human beings.
+            In our project, the hand region is extracted from the background by Region of intrest.
+            Then, we will be predicting the labels based on the CNN trained model weights of hand gestures using that predicted labels we apply if conditions  to control some of the actions like reshaping , blur, flip of the given image.
+          </small>
+        </h1>
+        
+        <div class=" my-2 text-center">
+          <a type="button" class="btn btn-primary btn-lg" href="{{ url_for('intro')}}">Click Here To Know More</a>  
+          <a type="button" class="btn btn-success btn-lg" href="{{ url_for('image1')}}">Launch</a>   
+          </button>
+      </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>
